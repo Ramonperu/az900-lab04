@@ -41,10 +41,18 @@ Y creamos la maquina buscandola en el marketplace dentro de nuestro recurso
 
 <img src="/img/4ºimagenn.png" alt="4ºimagenn"  />
 
-Nombramos a la maquina 1Wserv19, y abrimos el puerto HTTP 80.
-
-Podemos configurar las opciones de disponibilidad y tipos de seguridad y además podremos editar el nombre y contraseña del usuario a nuestro gusto.
-
-Seleccionamos los discos que se adapten a nuestra disponibilidad 
+Obligatoriamente hemos de asociar la maquina a **un grupo de recursos**, darle un **nombre**, indicar la **región**, la **imagen** que preseleccionamos en el marketplace, los **discos** de los cual dispondrá, un **usuario y una contraseña** y los **puertos de entrada** que queremos abrir
 
 <img src="/img/5ºimagenn.png" alt="5ºimagenn" style="zoom:150%;" />
+
+En este caso en concreto abriremos el puerto 80 nombraremos a la maquina 1Wserv19 y seleccionaremos los discos de menor facturación 
+
+**DISCOS**
+
+Seleccionaremos los discos Standard SSD's
+
+<img src="/img/6ºimagenn.png" alt="6ºimagenn" style="zoom:150%;" />
+
+**RED**
+
+Como hemos comenzado creando primero la maquina ahora deberemos crear la red dentro de este menu  y asociarle los datos correspondientes
