@@ -55,4 +55,60 @@ Seleccionaremos los discos Standard SSD's
 
 **RED**
 
-Como hemos comenzado creando primero la maquina ahora deberemos crear la red dentro de este menu  y asociarle los datos correspondientes
+Como hemos comenzado creando primero la maquina ahora deberemos crear la red dentro de este menú  y asociarle los datos correspondientes
+
+Creamos una red nueva y se nos muestra el siguiente menú:
+
+<img src="/img/7ºimagenn.png" alt="7ºimagenn" style="zoom:150%;" />
+
+Nombramos a la subred subnet01 y modificamos el rango de ips 10.0.0.0/20, la subred tendrá el siguiente rango 10.0.0.0/24
+
+
+
+Asignación nombre y parámetros ip publica
+
+<img src="/img/8ºimagenn.png" alt="8ºimagenn" style="zoom:150%;" />
+
+**NSG**
+
+Network Security Group
+
+Abrimos puerto HTTP y RDP (80, 3389)
+
+**TAGGING O ETIQUETAS**
+
+Hemos de acostumbrarnos a asociar los recursos a unas etiquetas para poder identificarlos de manera mas simple, creamos este proyecto para el Dpto de Marketing
+
+<img src="/img/9ºimagenn.png" alt="9ºimagenn" style="zoom:150%;" />
+
+Tras esto damos esto en review + create y se nos mostrara un resumen con los datos con los que hemos diseñado nuestra maquina, creamos y tardara unos minutos en desplegar nuestra maquina.
+
+<img src="/img/10ºimagenn.png" alt="10ºimagenn" style="zoom:150%;" />
+
+## Paso 3:
+
+### Creación de la maquina virtual de Windows 10:
+
+Nuevamente dentro del grupo de recursos vamos al marketplace y buscamos maquina virtual
+
+Le asociamos ***el nombre usuario contraseña, red y subred ya creadas, ip publica y tags y el NGS*** igual que el anterior pero sin el puerto 80 abierto ya que no lo necesitamos en el W10
+
+<img src="/img/11ºimagenn.png" alt="11ºimagenn" style="zoom:150%;" />
+
+## Paso 4:
+
+### Admin Center en el WServ19
+
+Ingresamos al apartado de Windows Admin Center dentro de la configuración de nuestra maquina y abrimos nuestros puerto 6516 tickando las 2 opciones e instalamos
+
+<img src="/img/12ºimagenn.png" alt="12ºimagenn" style="zoom:150%;" />
+
+Tambien necesitaremos el admin center en nuestra maquina local, a la hora de instalarlo via ejecutable nos salto un error y debimos de instalarlo con este comando
+
+*msiexec -i WindowsAdminCenternºversion.msi productLanguage="1033"*
+
+
+
+Asociamos el admin center con la maquina virtual de Azure con el ***TENANT ID***.
+
+Tras esto se nos asociara con nuestra cuenta de Azure, iniciaremos sesión y se nos pedirá identificar la suscripción grupo de recursos y maquina
