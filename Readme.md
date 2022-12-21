@@ -103,12 +103,44 @@ Ingresamos al apartado de Windows Admin Center dentro de la configuración de nu
 
 <img src="/img/12ºimagenn.png" alt="12ºimagenn" style="zoom:150%;" />
 
-Tambien necesitaremos el admin center en nuestra maquina local, a la hora de instalarlo via ejecutable nos salto un error y debimos de instalarlo con este comando
+También necesitaremos el admin center en nuestra maquina local, a la hora de instalarlo via ejecutable nos salto un error y debimos de instalarlo con este comando
 
 *msiexec -i WindowsAdminCenternºversion.msi productLanguage="1033"*
 
 
 
-Asociamos el admin center con la maquina virtual de Azure con el ***TENANT ID***.
+Añadimos el admin center en la maquina virtual de Azure, lo asociamos en nuestro admin center local con el ***TENANT ID***.
 
-Tras esto se nos asociara con nuestra cuenta de Azure, iniciaremos sesión y se nos pedirá identificar la suscripción grupo de recursos y maquina
+Tras esto se nos conectara con nuestra cuenta de Azure, iniciaremos sesión y se nos pedirá identificar la suscripción grupo de recursos y maquina.
+
+
+
+Por ultimo hemos de revisar la pertenencia al rol "Windows Admin Center Administrator Login" Role dentro de Acces control (IAM)
+
+<img src="/img/13ºimagenn.png" alt="13ºimagenn" style="zoom:150%;" />
+
+
+
+**Windows Defender**
+
+Habilitamos dentro de cada maquina las reglas  ICMP para habilitar el ping en lan entre nuestros equipos
+
+Dentro de WServ19 añadimos ***roles y características de Web Services*** IIS
+
+Comprobamos en lan y editamos la pagina a traves de esta ruta *C:\inetpub\wwwroot* **via CMD**
+
+<img src="/img/14ºimagenn.png" alt="14ºimagenn" style="zoom:150%;" />
+
+**DIAGRAMA FINAL**
+
+<img src="/img/16ºimagenn.png" alt="16ºimagenn" style="zoom:150%;" />
+
+## Paso 4:
+
+### Control coste
+
+Apagamos las maquinas y comprobamos que solo tarife el almacenamiento de estas mismas
+
+
+
+<img src="/img/15ºimagenn.png" alt="15ºimagenn" style="zoom:150%;" />
