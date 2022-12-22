@@ -107,7 +107,7 @@ También necesitaremos el admin center en nuestra maquina local, a la hora de in
 
 *msiexec -i WindowsAdminCenternºversion.msi productLanguage="1033"*
 
-
+**CONFIGURACION EXTRA WServer2019**
 
 Añadimos el admin center en la maquina virtual de Azure, lo asociamos en nuestro admin center local con el ***TENANT ID***.
 
@@ -123,7 +123,7 @@ Por ultimo hemos de revisar la pertenencia al rol "Windows Admin Center Administ
 
 **Windows Defender**
 
-Habilitamos dentro de cada maquina las reglas  ICMP para habilitar el ping en lan entre nuestros equipos
+Habilitamos dentro de cada maquina las reglas  ICMP(En W10 y Wserv) para habilitar el ping en LAN entre nuestros equipos
 
 Dentro de WServ19 añadimos ***roles y características de Web Services*** IIS
 
